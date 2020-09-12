@@ -1,12 +1,11 @@
 package learning_java;
 
-import learning_java.servicios.ColorsCodes;
+import learning_java.servicios.RamdomColorsPack;
 
 public class Main {
 	public static void main(String[] args) {
-		int n = 6;
 		String colorsCodesList = new String();
-		colorsCodesList = ColorsCodes.ColorsLists(n);
+		colorsCodesList = RamdomColorsPack.ColorsArray(6);
 		System.out.println(colorsCodesList);
 	}
 }
