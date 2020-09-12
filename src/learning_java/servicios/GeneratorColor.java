@@ -10,5 +10,4 @@ public class GeneratorColor{
 		String colorCode = String.format("#%06x", randomNum);
 		return colorCode.toString();
 	}
-	
 }
