@@ -9,6 +9,6 @@ public class RamdomColorsPack {
 		for (int i = 0; i < randomColorsArray.length; i++) {
 			randomColorsArray[i] = RandomColorGenerator.randomColor();
 		}
-	return Arrays.toString(randomColorsArray);
+		return Arrays.toString(randomColorsArray);
 	}
 }
