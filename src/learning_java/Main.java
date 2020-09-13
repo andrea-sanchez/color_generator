@@ -4,8 +4,8 @@ import learning_java.servicios.RamdomColorsPack;
 
 public class Main {
 	public static void main(String[] args) {
-		String colorsCodesList = new String();
-		colorsCodesList = RamdomColorsPack.ColorsArray(6);
-		System.out.println(colorsCodesList);
+		String randomColorsArray = new String();
+		randomColorsArray = RamdomColorsPack.colorsArray(6);
+		System.out.println(randomColorsArray);
 	}
 }

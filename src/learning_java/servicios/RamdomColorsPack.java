@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class RamdomColorsPack {
 	
-	public static String ColorsArray(int n) {
-		String[] randomColorsArray = new String[n];
-		for (int i = 0; i < randomColorsArray.length; i++) {
-			randomColorsArray[i] = RandomColorGenerator.randomColor();
+	public static String colorsArray(int n) {
+		String[] colorsHex = new String[n];
+		for (int i = 0; i < colorsHex.length; i++) {
+			colorsHex[i] = RandomColorGenerator.randomColorHex();
 		}
-		return Arrays.toString(randomColorsArray);
+		return Arrays.toString(colorsHex);
 	}
 }
