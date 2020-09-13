@@ -6,6 +6,7 @@ public class RandomColorGenerator{
 	public static String randomColor() {
 		Random color = new Random();
 		// Creates a random number. The maximum is ffffff (hex) = 16777215 (dec)
+		// The upper bound for nextInt() is exclusive so we must add + 1
 		int randomNumber = color.nextInt(0xffffff + 1);
 		String colorCode = String.format("#%06x", randomNumber);
 		return colorCode.toString();
