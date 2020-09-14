@@ -12,10 +12,10 @@ public class RandomColorsPack {
 	@Autowired
 	private RandomColorGenerator randomColorGenerator;
 
-	public List<String> colorsArray(int n) {
+	public List<String> colorsArray(int n, int seed) {
 		List<String> colorsHex = new ArrayList<String>();
 		for (int i = 0; i < n; i++) {
-			colorsHex.add(this.randomColorGenerator.randomColorHex());
+			colorsHex.add(this.randomColorGenerator.randomColorHex(seed));
 		}
 		return colorsHex;
 	}

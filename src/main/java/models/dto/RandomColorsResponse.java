@@ -1,19 +1,23 @@
-package dev.kodice.hexcolorgenerator.models.dto;
+package models.dto;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 public class RandomColorsResponse {
-
+	
 	private List<String> colors;
 
 	private LocalDateTime time;
 
+	private int nColors;
+	
 	private int seed;
+	
 
 	public RandomColorsResponse(List<String> colors, int seed) {
 		this.colors = colors;
 		this.seed = seed;
+		this.nColors = colors.size();
 		this.time = LocalDateTime.now();
 	}
 
@@ -33,6 +37,14 @@ public class RandomColorsResponse {
 		this.time = time;
 	}
 
+	public int getnColors() {
+		return nColors;
+	}
+
+	public void setnColors(int nColors) {
+		this.nColors = nColors;
+	}
+	
 	public int getSeed() {
 		return seed;
 	}
