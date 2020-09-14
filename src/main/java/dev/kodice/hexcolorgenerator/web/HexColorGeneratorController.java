@@ -15,9 +15,9 @@ public class HexColorGeneratorController {
 	@Autowired
 	private RandomColorsPack randomColorsPack;
 	
-	@RequestMapping("/{nColors}")
-	public List<String> hexColorGenetarot(@PathVariable int nColors) {
-		return this.randomColorsPack.colorsArray(nColors);
+	@RequestMapping("/{userSeed}/{nColors}")
+	public List<String> hexColorGenetarot(@PathVariable int userSeed, @PathVariable int nColors) {
+		return this.randomColorsPack.colorsArray(nColors, userSeed);
 	}
 
 }
