@@ -2,7 +2,6 @@ package dev.kodice.hexcolorgenerator.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +13,12 @@ public class RandomColorsPack {
 	@Autowired
 	private RandomColorGenerator randomColorGenerator;
 
-	public List<String> colorsArray(int n, int userSeed) {
-		List<String> colorsHex = new ArrayList<String>();
-		Random random = new Random();
+	public List<String> colorsArray(int nColor, int userSeed) {
+		var colorsHex = new ArrayList<String>();
+		var random = new Random();
 		random.setSeed(userSeed);
-		for (int i = 0; i < n; i++) {
-			colorsHex.add(this.randomColorGenerator.randomColorHex(Optional.of(random)));
+		for (var iColor = 0; iColor < nColor; iColor++) {
+			colorsHex.add(this.randomColorGenerator.randomColorHex(random));
 		}
 		return colorsHex;
 	}
