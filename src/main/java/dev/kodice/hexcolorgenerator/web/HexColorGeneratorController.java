@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.kodice.hexcolorgenerator.models.dto.RandomColorsResponse;
-import dev.kodice.hexcolorgenerator.services.RandomColorsPack;
+import dev.kodice.hexcolorgenerator.services.RandomColorsPackGenerator;
 
 @RestController
 @RequestMapping(path = "/random")
 public class HexColorGeneratorController {
 
 	@Autowired
-	private RandomColorsPack randomColorsPack;
+	private RandomColorsPackGenerator randomColorsPack;
 
 	@GetMapping
 	public RandomColorsResponse defaultHexColor(@RequestParam(defaultValue = "1") int nColors,
