@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class RandomColorGenerator {
 
-	public String randomColorHex(Optional<Random> random) {
+	public String getColor(Optional<Random> random) {
 		Random r = random.orElse(new Random());
 		// Creates a random number. The maximum is ffffff (hex) = 16777215 (dec)
 		// The upper bound for nextInt() is exclusive so we must add + 1

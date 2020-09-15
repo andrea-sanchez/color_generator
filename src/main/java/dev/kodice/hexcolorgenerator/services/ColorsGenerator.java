@@ -9,17 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RandomColorsPackGenerator {
+public class ColorsGenerator {
 
 	@Autowired
 	private RandomColorGenerator randomColorGenerator;
 
-	public List<String> colorsArray(int n, int userSeed) {
+	public List<String> getRandomPalette(int n, int userSeed) {
 		List<String> colorsHex = new ArrayList<String>();
 		Random random = new Random();
 		random.setSeed(userSeed);
 		for (int i = 0; i < n; i++) {
-			colorsHex.add(this.randomColorGenerator.randomColorHex(Optional.of(random)));
+			colorsHex.add(this.randomColorGenerator.getColor(Optional.of(random)));
 		}
 		return colorsHex;
 	}
