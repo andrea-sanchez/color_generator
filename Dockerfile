@@ -3,7 +3,7 @@ WORKDIR /workdir
 COPY . /workdir
 RUN mvn install
 
-FROM java:14-jdk-alpine
+FROM alpine-slim
 ARG jarfile
 ENV JAR_FILE=$jarfile
 WORKDIR /workdir
