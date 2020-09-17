@@ -3,7 +3,7 @@ WORKDIR /workdir
 COPY . /workdir
 RUN mvn install
 
-FROM alpine-slim
+FROM anapsix/alpine-java
 ARG jarfile
 ENV JAR_FILE=$jarfile
 WORKDIR /workdir
