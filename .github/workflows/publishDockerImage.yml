@@ -18,4 +18,4 @@ jobs:
           registry: docker.pkg.github.com
           repository: efren-cabrera/hexcolor-generator/hexcolor-generator
           tag_with_ref: true
-          build-args: jarfile=${{ secrets. ACTUAL_VERSION }}
+          build-args: jarfile=${{ secrets.ACTUAL_VERSION }}
