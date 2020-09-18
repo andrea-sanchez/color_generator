@@ -4,9 +4,7 @@ COPY . /workdir
 RUN mvn install
 
 FROM anapsix/alpine-java
-ARG jarfile
-ENV JAR_FILE=$jarfile
 WORKDIR /workdir
-COPY --from=builder /workdir/target/$jarfile /workdir
+COPY --from=builder /workdir/target/hexcolor-generator-build.jar /workdir
 EXPOSE 8080
-ENTRYPOINT java -jar $JAR_FILE
+ENTRYPOINT java -jar hexcolor-generator-build.jar
