@@ -3,7 +3,7 @@ WORKDIR /workdir
 COPY . /workdir
 RUN mvn install
 
-FROM anapsix/alpine-java
+FROM openjdk:14-alpine
 WORKDIR /workdir
 COPY --from=builder /workdir/target/hexcolor-generator-build.jar /workdir
 EXPOSE 8080
