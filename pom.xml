@@ -16,7 +16,7 @@
 	<description>Servicio generador de colores hexadecimales aleatorio</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>1.14</java.version>
 	</properties>
 
 	<dependencies>
