@@ -1,5 +1,6 @@
 package dev.kodice.hexcolorgenerator.web;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
