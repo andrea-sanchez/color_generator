@@ -19,8 +19,8 @@ class RandomColorsResponseTest {
 		registerValueGenerator(() -> {
 			int month = ThreadLocalRandom.current().nextInt(1, 13);
 			int day = ThreadLocalRandom.current().nextInt(1, 28);
-			int hour = ThreadLocalRandom.current().nextInt(1, 13);
-			int minutes = ThreadLocalRandom.current().nextInt(1, 60);
+			int hour = ThreadLocalRandom.current().nextInt(0, 13);
+			int minutes = ThreadLocalRandom.current().nextInt(0, 60);
 			return LocalDateTime.of(2019, month, day, hour, minutes);
 		}, LocalDateTime.class);
 		assertNotNull(new RandomColorsResponse(null, 5));
