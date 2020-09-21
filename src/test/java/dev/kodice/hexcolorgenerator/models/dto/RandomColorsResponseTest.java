@@ -23,7 +23,6 @@ class RandomColorsResponseTest {
 			int minutes = ThreadLocalRandom.current().nextInt(0, 60);
 			return LocalDateTime.of(2019, month, day, hour, minutes);
 		}, LocalDateTime.class);
-
 		assertNotNull(new RandomColorsResponse(null, 5));
 		assertThat(RandomColorsResponse.class, hasValidBeanConstructor());
 		assertThat(RandomColorsResponse.class, hasValidBeanToString());
