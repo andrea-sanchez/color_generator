@@ -16,9 +16,9 @@
 	<description>Servicio generador de colores hexadecimales aleatorio</description>
 
 	<properties>
-		<java.version>12</java.version>
-		<maven.compiler.source>12</maven.compiler.source>
-		<maven.compiler.target>12</maven.compiler.target>
+		<java.version>14</java.version>
+		<maven.compiler.source>14</maven.compiler.source>
+		<maven.compiler.target>14</maven.compiler.target>
 	</properties>
 
 	<dependencies>
