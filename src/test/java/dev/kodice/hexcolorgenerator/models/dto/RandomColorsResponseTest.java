@@ -8,6 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDateTime;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,9 +17,11 @@ class RandomColorsResponseTest {
 	@Test
 	public void testRandomColorsResponse() {
 		registerValueGenerator(() -> {
-			double m = (Math.random() * (12)) + 1;
-			double d = (Math.random() * (25)) + 1;
-			return LocalDateTime.of(2019, (int) m, (int) d, (int) m, (int) d);
+			int month = ThreadLocalRandom.current().nextInt(0, 13);
+			int day = ThreadLocalRandom.current().nextInt(0, 28);
+			int hour = ThreadLocalRandom.current().nextInt(0, 13);
+			int minutes = ThreadLocalRandom.current().nextInt(0, 60);
+			return LocalDateTime.of(2019, month, day, hour, minutes);
 		}, LocalDateTime.class);
 
 		assertNotNull(new RandomColorsResponse(null, 5));
