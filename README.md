@@ -2,6 +2,8 @@
 
 ## [GET] Random colors
 
+![](https://github.com/efren-cabrera/hexcolor-generator/workflows/tests/badge.svg)
+
 Route: `/api/hex-color/random?nColors={nColors}&seed={seed}`
 
 Parameters:
