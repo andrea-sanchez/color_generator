@@ -1,6 +1,6 @@
 package dev.kodice.hexcolorgenerator.web;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
