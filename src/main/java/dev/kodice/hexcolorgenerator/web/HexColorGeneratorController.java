@@ -1,5 +1,6 @@
 package dev.kodice.hexcolorgenerator.web;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
@@ -24,7 +25,7 @@ public class HexColorGeneratorController {
 			@RequestParam(required = false) Optional<Integer> seed) {
 		var maxRandomSeed = 1001;
 		var finalSeed = seed.orElseGet(() -> new Random().nextInt(maxRandomSeed));
-		var colors = this.randomColorsPack.colorsArray(nColors, finalSeed);
+		List<String> colors = this.randomColorsPack.colorsArray(nColors, finalSeed);
 		var response = new RandomColorsResponse(colors, finalSeed);
 		return response;
 	}
