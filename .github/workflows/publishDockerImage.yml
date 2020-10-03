@@ -16,6 +16,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: efren-cabrera/hexcolor-generator/hexcolor-generator
+          repository: andrea-sanchez/color_generator/color_generator
           tag_with_ref: true
           build-args: jarfile=${{ secrets.ACTUAL_VERSION }}
